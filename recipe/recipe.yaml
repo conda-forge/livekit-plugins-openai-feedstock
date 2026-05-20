@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 1.5.10
+  version: 1.5.11
 
 package:
   name: livekit-plugins-openai
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/l/livekit-plugins-openai/livekit_plugins_openai-${{ version }}.tar.gz
-    sha256: 9449664653f10e51765a171c8bb1b4df45d49a4f471ec32aa772b5919d72cd12
+    sha256: d0be3274e7d3b3c51d3721ded886e8f53c89ca0cbb6e0b243254b682a1488c5c
   - url: https://raw.githubusercontent.com/livekit/agents/refs/tags/livekit-agents%40${{ version }}/LICENSE
     sha256: c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4
     file_name: LICENSE
@@ -26,7 +26,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - livekit-agents >=1.5.10
+    - livekit-agents >=1.5.11
     - openai >=2
 tests:
   - python:
