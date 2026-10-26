@@ -27,7 +27,10 @@ requirements:
   run:
     - python >=${{ python_min }}
     - livekit-agents >=1.8.3
-    - openai >=2.50
+    # 1.8.x still imports ``httpx`` directly; upstream only moved to the httpx2
+    # stack in 1.8.7. openai 3.x is httpx2 based, so it no longer pulls httpx in.
+    - openai >=2.50,<3
+    - httpx
 tests:
   - python:
       python_version:
